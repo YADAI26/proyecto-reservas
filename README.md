@@ -21,3 +21,5 @@ Cristóbal Ramírez Lisandro
 Oaxaca, Oaxaca, a 07 de Septiembre de 2025.
 
 </div>
+
+## GitHub Pages: https://yadai26.github.io/proyecto-reservas/
