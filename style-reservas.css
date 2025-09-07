@@ -1,0 +1,133 @@
+:root{
+  --verde:#16a34a;
+}
+
+html{ scroll-behavior:smooth; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+.hero.hero-inicio{
+  position: relative;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url('../IMG/inicio.jpg') center/cover no-repeat;
+}
+.section-cover.section-nosotros{
+  position: relative;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55)),
+    url('../IMG/sobren.jpg') center/cover no-repeat;
+}
+.text-shadow-light{ text-shadow: 0 2px 18px rgba(0,0,0,.45); }
+
+.glass-card,
+.glass-card-alt{
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 18px;
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+  padding: 1.25rem 1.25rem 1rem;
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+}
+
+.glass-card h3, .glass-card-alt h3{ color:#fff; }
+.glass-card ul, .glass-card-alt ul{ margin-left: 1rem; }
+
+.icon-wrap{
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.35);
+  margin-bottom: .6rem;
+  font-size: 1.25rem;
+}
+
+section{ padding: 80px 0; }
+
+/* Mapa */
+.mapa{ width:100%; border:0; border-radius:.75rem; }
+
+/* Footer */
+footer{ background:#0b1324; color:#cbd5e1; }
+footer a{ color:#e2e8f0; text-decoration:none; }
+footer a:hover{ color:#fff; text-decoration:underline; }
+
+/* Responsive pequeños ajustes */
+@media (max-width: 576px){
+  .glass-card, .glass-card-alt{ padding: 1rem; }
+}
+
+/* ====== LOGIN (fondo + panel glass) ====== */
+
+/* Fondo con tu imagen (cámbiala si quieres) */
+/* Si tu CSS está en /css/ y la imagen en /IMG/, la ruta correcta es ../IMG/... */
+body.login-bg{
+  min-height: 100vh;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background-image: url('../IMG/logreservas.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Capa oscura suave para legibilidad sobre la foto */
+body.login-bg::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(1200px 700px at 20% 10%, rgba(0,0,0,.35), transparent 60%),
+              linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.35));
+  z-index: 0;
+}
+
+/* Caja transparente (glass) */
+.login-glass{
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);        /* ajusta 360–440px si la quieres más/menos ancha */
+  border-radius: 24px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.35);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  backdrop-filter: blur(14px) saturate(120%);
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+/* Inputs “pastilla” transparentes */
+.glass-input{
+  height: 48px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255,255,255,.14);
+  border: 1.5px solid rgba(255,255,255,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+}
+.glass-input::placeholder{ color: rgba(255,255,255,.85); }
+.glass-input:focus{
+  background: rgba(255,255,255,.18);
+  border-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.18);
+  color: #fff;
+}
+
+/* Botón claro redondeado */
+.btn-light{
+  color: #1f2937;
+  box-shadow: 0 10px 24px rgba(255,255,255,.22);
+}
+.btn-light:hover{ filter: brightness(.98); }
+
+/* (Opcional) versión más compacta del panel en móviles */
+@media (max-width: 420px){
+  .login-glass{ width: 100%; border-radius: 18px; }
+}
