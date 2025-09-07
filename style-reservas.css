@@ -73,7 +73,7 @@ body.login-bg{
   min-height: 100vh;
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background-image: url('img/logreservas.jpg');
+  background-image: url('img/login.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
